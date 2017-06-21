@@ -68,4 +68,16 @@ resource "aws_instance" "myweb" {
   tags {
     Name = "Web"
   }
+
+  #   provisioner "remote-exec" {
+  #   inline = [
+  #     "sudo apt-get -y update",
+  #     "sudo apt-get -y install nginx",
+  #     "sudo service nginx start",
+  #   ]
+  # }
+}
+
+output "ip" {
+  value = "${aws_instance.myweb.public_ip}"
 }
