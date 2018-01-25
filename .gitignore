@@ -5,3 +5,9 @@ terraform.tfvars
 
 # Module directory
 .terraform/
+
+# Keys
+ssh/
+
+# Project
+proj/
